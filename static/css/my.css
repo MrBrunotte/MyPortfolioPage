@@ -11,9 +11,10 @@ body{
 h1, h2, h3, h4, h5, h6, p {
     color:black;
 }
-/* Images */
 
-/*##### Landingpage #####*/
+/************************
+###### LANDINGPAGE ######
+*************************/
 .landingpage_body {
     background-size: cover;
     background-position: center center;
@@ -36,13 +37,17 @@ h1, h2, h3, h4, h5, h6, p {
     left: 50%;
     letter-spacing: 25px;
 }
-.landingpage_wrapper h2 {
-    padding: 0;
-    margin-bottom: 30px;
+
+.landingpage_anchors a {
+    background: rgba(128, 128, 128, 0.20);
     color: rgb(146, 146, 146);
-    text-shadow: 0 2px 0 rgba(0,0,0,0.5);
-    font-size: 60px;
-    letter-spacing: 0px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 30px;
 }
 
 /* Animation */
@@ -57,31 +62,19 @@ span:before {
     letter-spacing: 8px;
 }
 
-.landingpage_wrapper p {
+.landingpage_wrapper h2 {
+    padding: 0;
+    margin-bottom: 30px;
     color: rgb(146, 146, 146);
-    font-size: 18px;
-    margin: 60px;
-    line-height: 35px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.5);
+    font-size: 60px;
+    letter-spacing: 0px;
 }
-
-.landingpage_anchors a {
-    background: rgba(128, 128, 128, 0.20);
-    color: rgb(146, 146, 146);
-    font-weight: 900;
-    letter-spacing: 3px;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 30px;
-}
-
 
 @keyframes animate {
     0% {
         content: 'stefan brunotte';
         color: red;
-        
     }
     30% {
         content: 'a full stack developer';
@@ -101,7 +94,98 @@ span:before {
     }
 }
 
+/************************
+###### MY PROJECTS ######
+*************************/
 
+/************************
+###### CONTACT ME #######
+*************************/
+
+
+/**************************
+###### MEDIA QUERIES ######
+***************************/
+
+
+@media only screen and (min-width: 1199px) {
+
+}
+@media only screen and (min-width: 767px) and  (max-width: 991px) {
+
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 575px) {
+    .landingpage_wrapper h2 {
+        font-size: 24px;
+    }
+    span::before {
+        font-size: 36px;
+    }
+    .landingpage_anchors {
+        top: 62%;
+        left: 50%;
+        letter-spacing: 25px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 575px) {
+    .landingpage_wrapper h2 {
+        font-size: 24px;
+    }
+    span::before {
+        font-size: 36px;
+    }
+    .landingpage_anchors {
+        top: 62%;
+        left: 50%;
+        letter-spacing: 25px;
+    }
+}
+
+/* Landscape settings */ 
+
+/* 7. 1024x768 Ipad*/
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 812px) and (orientation:landscape) {
+    .landingpage_wrapper {
+        top: 28%;
+    }
+    .landingpage_wrapper h2 {
+        font-size: 24px;
+    }
+    span::before {
+        font-size: 36px;
+    }
+    .landingpage_anchors {
+        top: 62%;
+        left: 50%;
+        letter-spacing: 25px;
+    }
+}
+@media screen and (max-width: 667px) and (orientation:landscape) {
+    .landingpage_wrapper {
+        top: 28%;
+    }
+    .landingpage_wrapper h2 {
+        font-size: 24px;
+    }
+    span::before {
+        font-size: 36px;
+    }
+    .landingpage_anchors {
+        top: 62%;
+        left: 50%;
+        letter-spacing: 25px;
+    }
+}
+@media screen and (max-width: 568px) and (orientation:landscape) {
+
+}
 
 .container {
     width: 95%;
@@ -150,18 +234,3 @@ span:before {
       opacity: 1;
     }
   }
-
-
-
-/* navbar */
-nav {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: #1b242f;
-    border-bottom: 3px solid #04c2c9;
-    height: 50px;
-    text-align: left;
-    width: 100%;
-    z-index: 99;
-}
