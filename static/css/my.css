@@ -6,6 +6,8 @@ body{
     padding: 0;
     /*font-family: 'Poppins', sans-serif;*/
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -44,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 900;
     letter-spacing: 3px;
     text-decoration: none;
+    text-transform: capitalize;
     padding: 10px 25px;
     border-radius: 5px;
     display: inline-block;
@@ -98,10 +101,50 @@ span:before {
 ###### MY PROJECTS ######
 *************************/
 
+main {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+
 /************************
 ###### CONTACT ME #######
 *************************/
 
+
+/************************
+###### FOOTER #######
+*************************/
+
+
+.footer_parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    text-align: center;
+    /*grid-template-areas: 
+        ".  linkedin   github  cv"
+        ".  .     author  .";*/
+    }
+/*
+    .cv { grid-area: "cv"; }
+.github { grid-area: "github"; }
+.linkedin { grid-area: "linkedin"; }
+.author { grid-area: "author"; }
+*/
+    .linkedin { grid-area: 1 / 1 / 2 / 2; }
+    .github { grid-area: 1 / 2 / 2 / 3; }
+    .cv { grid-area: 1 / 3 / 2 / 4; }
+    .author { grid-area: 2 / 2 / 3 / 3; }
+
+.author {
+    text-transform: uppercase;
+    text-align: center;
+}
 
 /**************************
 ###### MEDIA QUERIES ######
@@ -187,6 +230,9 @@ span:before {
 
 }
 
+
+
+/* CURRENTLY NOT USED CSS STYLES */
 .container {
     width: 95%;
     margin: 0 auto;
