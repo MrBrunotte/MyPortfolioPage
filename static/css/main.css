@@ -1,0 +1,283 @@
+/********************
+###### MY START CSS ######
+*********************/
+/*  Fonts: Roboto 100, 300, 400, 400 italic, 500, 500 italic, 900 & Popins */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color:black;
+}
+
+
+
+
+
+/********************
+###### MY WORK ######
+*********************/
+
+
+
+
+/************************
+###### CONTACT ME #######
+*************************/
+
+
+/********************
+###### FOOTER #######
+*********************/
+/* BASIC STYLES */ 
+.footer {
+    color: #fff;
+    background: rgb(124, 124, 124);
+    padding: 20px 0;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 7vw 1fr 7vw;
+    grid-template-rows: auto;
+}
+.footer-container {
+    grid-column: 2 / 3;
+}
+.footer-container {
+    grid-column: 2 / 3;
+    display: grid;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "contact social"; 
+}
+.contact-block,
+.social-networks {
+    padding: 0 0 10px;
+    display: grid;
+}
+.contact-block {
+    grid-area: contact;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.social-networks {
+    grid-area: social;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.social-networks h3 {
+    grid-column: 1 / -1;
+} 
+.github {
+    justify-self: right;
+}
+.twitter {
+    justify-self: left;
+}
+
+
+
+.text-input input {
+    border-radius: 0;
+}
+.text-input input:first-child {
+    height: 2rem;
+}
+.text-input input:last-child {
+    height: 2.25rem;
+    color: #fff;
+    border: none;
+    background-color: #f99639;
+    width: 5rem;
+    font-weight: 900;
+}
+.fas, .fab {
+    font-size: 1.5rem;
+}
+.footer a {
+    color: #fff;
+}
+.contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+}
+.contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+}
+.contact-block,
+.social-networks {
+    border-bottom: 2px solid #f99639;
+}
+.github:hover,
+.linkedin:hover,
+.twitter:hover {
+    color: #f99639;
+}
+.bottom-line {
+    background-color: #444554;
+}
+.bottom-line, .bottom-line a {
+    color: #fff;
+}
+.copyright {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+/**************************
+###### MEDIA QUERIES ######
+***************************/
+
+@media screen and (max-width: 960px) {
+    .footer-nav,
+    .footer-secondary-nav { 
+        display: none;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "contact social";
+        }
+}
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "social"
+            "contact";
+        } 
+    .footer-logo,
+    .contact-block {
+        justify-self: center;
+        align-self: center;
+    }
+    .contact-block a,
+    .contact-block p {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .social-networks {
+        margin-bottom: 25px;
+    }
+    .contact-block,
+    .social-networks {
+        border-bottom: none;
+    }
+    .contact-block h3,
+    .social-networks h3 {
+        line-height: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1199px) {
+
+}
+@media only screen and (min-width: 767px) and  (max-width: 991px) {
+
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 575px) {
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 575px) {
+
+}
+
+/* Landscape settings */ 
+
+/* 7. 1024x768 Ipad*/
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 812px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 667px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 568px) and (orientation:landscape) {
+
+}
+
+
+
+/* CURRENTLY NOT USED CSS STYLES */
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+/* animation */
+.animated.slide-in-left {
+    animation: slideInLeft 0.75s ease both;
+}
+
+.animated.slide-in-right {
+    animation: slideInRight 0.75s ease both;
+}
+
+.animated.fade-in {
+    animation: fadeIn 0.75s ease both;
+        animation-delay: 0s;
+}
+
+/* @keyframes for animations */
+@keyframes slideInLeft {
+0% {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes slideInRight {
+0% {
+    opacity: 0;
+    transform: translateX(300px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
