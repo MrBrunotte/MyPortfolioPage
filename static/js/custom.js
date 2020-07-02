@@ -1,3 +1,19 @@
+/* JS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Vars and Inits
+2. Set Header
+3. Init Menu
+4. Init Video
+5. Init Gallery
+6. Bootstrap Modal
+
+
+******************************/
+
 $(document).ready(function () {
     "use strict";
 
@@ -25,6 +41,8 @@ $(document).ready(function () {
         setHeader();
     });
 
+
+    initGallery();
     initMenu();
 
 	/* 
@@ -46,7 +64,7 @@ $(document).ready(function () {
 
 	/* 
 
-	3. Menu
+	3. Init Menu
 
 	*/
 
@@ -59,4 +77,45 @@ $(document).ready(function () {
             });
         }
     }
+
+	/* 
+
+	5. Init Gallery
+
+	*/
+
+    function initGallery() {
+        if ($('.gallery_slider').length) {
+            var gallery = $('.gallery_slider');
+            gallery.owlCarousel(
+                {
+                    autoplay: true,
+                    loop: true,
+                    smartSpeed: 1200,
+                    nav: false,
+                    dots: false,
+                    center: true,
+                    responsive:
+                    {
+                        0:
+                        {
+                            items: 3
+                        },
+                        991:
+                        {
+                            items: 5
+                        }
+                    }
+                });
+        }
+    }
+	/* 
+
+	6. Bootstrap modal
+
+	*/
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus');
+    });
+
 });
