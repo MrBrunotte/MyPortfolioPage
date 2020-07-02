@@ -119,7 +119,7 @@ main {
     margin: 0 auto;
     padding: 30px 20px;
     /*To make sure the footer is at the bottom all the time 100vh - header - footer*/
-    min-height: calc(100vh - 103px - 40px);
+    min-height: calc(100vh - 103px);
 }
 /********************
 ###### NAVBAR #######
@@ -404,6 +404,8 @@ Menu
     background: rgb(124, 124, 124);
     padding: 20px 0 10px;
     z-index: 10;
+    position: relative;
+    /*clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);*/
 }
 .footer-container {
     grid-column: 1 / -1;
