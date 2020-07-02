@@ -1,12 +1,44 @@
+@charset "utf-8";
 /********************
-###### MY START CSS ######
+###### FONTS ########
 *********************/
-/*  Fonts: Roboto 100, 300, 400, 400 italic, 500, 500 italic, 900 & Popins */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400;1,500&display=swap');
 
-
+/*******************************
+###### GENERAL SETTINGS ########
+********************************/
 * {
     box-sizing: border-box;
-    padding: 0; margin: 0;
+    padding: 0; 
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    width: 100%;
+}
+div {
+	display: block;
+	position: relative;
+}
+section {
+	display: block;
+	position: relative;
+}
+p {
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 400;
+}
+p a {
+	display: inline;
+	position: relative;
+	color: inherit;
+}
+ul {
+	list-style: none;
+	margin-bottom: 0px;
 }
 li {
     list-style-type: none;
@@ -14,28 +46,245 @@ li {
 a {
     text-decoration: none;
 }
-
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
+h1{font-size: 48px;}
+h2{font-size: 36px;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
+h5{font-size: 14px;}
+h1, h2, h3, h4, h5, h6
+{
+	line-height: 1.2;
+}
+.button {
+	width: 190px;
+	height: 43px;
+	font-weight: 600;
+	border-radius: 22px;
+	background: #f98c00;
+	box-shadow: 0 0 1px 0 #FFFFFF inset, 0 0 1px 0 #FFFFFF;
+	text-align: center;
+	text-transform: capitalize;
+}
+.button a {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 43px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	z-index: 1;
+}
+.button a::before {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 130px;
+	height: 100%;
+	content: '';
+	background: #ff9711;
+	border-radius: 22px;
+	z-index: -1;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.button:hover a::before {
+	width: 100%;
+}
+.trans_300 {
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.trans_400 {
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.trans_500 {
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.trans_800 {
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-ms-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+main {
+    width: 90vw;
+    margin: 0 auto;
+    padding: 30px 20px;
+    /*To make sure the footer is at the bottom all the time 100vh - header - footer*/
+    min-height: calc(100vh - 103px - 40px);
+}
+/********************
+###### NAVBAR #######
+*********************/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    border-bottom: solid 1px #FFFFFF;
+    background: #262626;
+    z-index: 100;
+}
+.nav_container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.flex_row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.nav_content {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+}
+.main_nav {
+    margin-left: 120px;
+    align-items: center;
+}
+.ul_class {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.nav_list {
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color:white;
+    margin-right: 40px;
+    display: inherit;
+    font-size: 1rem;
+    text-align: center;
+}
+.nav_list:hover {
+    color: #f99639;
+}
+.active {
+    color: #f99639;
+}
+.active:hover {
+    color:white;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    color:black;
+/* HAMBURGER NAV */
+.hamburger_bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    right: calc((100vw - 690px) / 2 - 15px);
+    width: auto;
+    height: 101px;
+    z-index: 102;
+
 }
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 35%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 2;
+}
+.menu_toggle {
 
+}
+.hamburger_container {
 
+}
+.menu_hamburger {
 
+}
+.line_1 {
+
+}
+.line_2 {
+
+}
+.line_3 {
+
+}
+.hamburger_lines {
+
+}
+.menu {
+
+}
 
 
 /********************
 ###### MY WORK ######
 *********************/
-
-
-
+/*
+.box_rotate_left,
+.box_rotate_right {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    border: 2px solid red;
+    overflow: hidden;
+}
+#myDivLeft {
+    -ms-transform: rotate(5deg); 
+    transform: rotate(5deg); 
+}
+#myDivRight {
+    -ms-transform: rotate(175deg);
+    transform: rotate(175deg); 
+}
+*/
 
 /************************
 ###### CONTACT ME #######
@@ -46,32 +295,32 @@ h1, h2, h3, h4, h5, h6, p {
 ###### FOOTER #######
 *********************/
 /* BASIC STYLES */ 
-.footer {
-    color: #fff;
-    background: rgb(124, 124, 124);
-    padding: 20px 0;
-}
+
 .footer {
     display: grid;
     grid-template-columns: 7vw 1fr 7vw;
     grid-template-rows: auto;
+    color: #fff;
+    background: rgb(124, 124, 124);
+    padding: 20px 0 10px;
+    z-index: 10;
 }
 .footer-container {
-    grid-column: 2 / 3;
-}
-.footer-container {
-    grid-column: 2 / 3;
+    grid-column: 1 / -1;
     display: grid;
+    width: 100%;
+    margin: 0 auto;
     /* ACTING AS A GRID CONTAINER */
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "contact social"; 
+        "social"; 
 }
-.contact-block,
+
 .social-networks {
     padding: 0 0 10px;
     display: grid;
+    letter-spacing: 1.5px;
 }
 .contact-block {
     grid-area: contact;
@@ -96,8 +345,6 @@ h1, h2, h3, h4, h5, h6, p {
 .twitter {
     justify-self: left;
 }
-
-
 
 .text-input input {
     border-radius: 0;
@@ -131,10 +378,7 @@ h1, h2, h3, h4, h5, h6, p {
     border: 2px solid #f99639;
     color: #f99639;
 }
-.contact-block,
-.social-networks {
-    border-bottom: 2px solid #f99639;
-}
+
 .github:hover,
 .linkedin:hover,
 .twitter:hover {
@@ -150,11 +394,34 @@ h1, h2, h3, h4, h5, h6, p {
     grid-column: 1 / -1;
     margin: 0 auto;
     padding-top: 10px;
+    letter-spacing: 4px;
+    font-size: 11px;
 }
 
 /**************************
 ###### MEDIA QUERIES ######
 ***************************/
+
+/*************************************
+1. Hamburger menu below 1190px width
+**************************************/
+
+@media only screen and (max-width: 1190px)
+{
+	.hamburger
+	{
+		display: block;
+	}
+	.hamburger_bar
+	{
+		display: block;
+		right: 125px;
+	}
+	.main_nav
+	{
+		display: none;
+	}
+}
 
 @media screen and (max-width: 960px) {
     .footer-nav,
@@ -165,15 +432,14 @@ h1, h2, h3, h4, h5, h6, p {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "contact social";
+            "social";
         }
 }
 @media screen and (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
         grid-template-areas:
-            "social"
-            "contact";
+            "social";
         } 
     .footer-logo,
     .contact-block {
@@ -188,7 +454,6 @@ h1, h2, h3, h4, h5, h6, p {
     .social-networks {
         margin-bottom: 25px;
     }
-    .contact-block,
     .social-networks {
         border-bottom: none;
     }
@@ -229,6 +494,187 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media screen and (max-width: 568px) and (orientation:landscape) {
 
+}
+
+/* TESTING #######################################################*/
+
+.img_size {
+    width: 600px;
+    height: auto;
+}
+
+.fade-in {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+  }@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+  }
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-7-1 21:21:35
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+.slit-in-vertical_1 {
+	-webkit-animation: slit-in-vertical 0.60s ease-out both;
+	        animation: slit-in-vertical 0.60s ease-out both;
+}
+.slit-in-vertical_2 {
+	-webkit-animation: slit-in-vertical 1.10s ease-out both;
+	        animation: slit-in-vertical 1.10s ease-out both;
+}
+.slit-in-vertical_3 {
+	-webkit-animation: slit-in-vertical 1.30s ease-out both;
+	        animation: slit-in-vertical 1.30s ease-out both;
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*
+ * ----------------------------------------
+ * animation slit-in-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes slit-in-vertical {
+    0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    54% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+    }
+    100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+    }
+}
+@keyframes slit-in-vertical {
+    0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    54% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+    }
+}
+/*
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+/*
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 

@@ -16,55 +16,96 @@
 
 <body>
     <!-- MY WORK -->
-    <header>
-        <h1>HEADER menu
-        </h1>
+    <header class="slide-in-top">
+        <div class="nav_container">
+            <div class="flex_row">
+                <div class="col">
+                    <div class="nav_content">
+                        <nav class="main_nav">
+                            <ul class="ul_class">
+                                <a class="nav_list" href="index.html">home</a>
+                                <a class="nav_list active" href="index.html">about</a>
+                                <a class="nav_list" href="my_work.html">my work</a>
+                                <a class="nav_list" href="contact.html">contact</a>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
+
+    <!-- Hamburger animation -->
+    <div class="hamburger_bar trans_400">
+        <div class="hamburger">
+            <div class="menu_toggle">
+                <span>menu</span>
+                <div class="hamburger_container">
+                    <div class="menu_hamburger">
+                        <div class="line_1 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                        <div class="line_2 hamburger_lines" style="visibility: inherit; opacity: 1;"></div>
+                        <div class="line_3 hamburger_lines" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+
+    <div class="menu trans_800">
+        <div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+            <div>
+                <a class="nav_list" href="index.html">home</a>
+                <a class="nav_list" href="index.html">about</a>
+                <a class="nav_list" href="my_work.html">my work</a>
+                <a class="nav_list" href="contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+    <!--Main section-->
     <main>
         <article>
             <h2>MAIN menu
             </h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla earum commodi fugit excepturi esse!
-                At aspernatur aliquid sed. Et assumenda beatae quidem. Harum sunt cupiditate minima cum tempore porro
-                adipisci laboriosam commodi magni expedita, qui, earum sapiente obcaecati quasi mollitia inventore,
-                dolorum iusto unde laudantium incidunt? Velit magni est nam eum repudiandae eveniet mollitia quibusdam
-                laborum, nihil corrupti obcaecati sit ab perferendis amet placeat, eius quod, tenetur dolore? Adipisci
-                omnis ullam error officiis? Delectus amet quas voluptatibus repellendus commodi non facere reprehenderit
-                quia labore soluta officiis obcaecati accusantium eligendi, placeat optio earum ipsa impedit vero nam
-                voluptates ex. Facilis!
+            <div class="fade-in">
+                <img src="./img/worldofshape.JPG" class="img_size" alt="Image of worldofshape landing page">
+            </div>
             </p>
+            <!--<div id="myDivLeft" class="box_rotate_left">
+            5 degrees
+        </div>
+        <div id="myDivRight" class="box_rotate_right">
+            175 degrees
+        </div>-->
         </article>
     </main>
 
     <!--FOOTER-->
     <footer class="footer">
         <div class="footer-container">
-            <div class="contact-block">
-                <h3>Feel free to contact me!</h3>
-                <a href="tel:0046708240243"><i class="fas fa-phone"></i> +46 708-240 243</a>
-                <a href="mailto:info@stefanbrunotte.com">info@stefanbrunotte.com</a>
-            </div>
             <div class="social-networks">
-                <h3>Social!</h3>
-                <div class="github">
-                    <i class="fab fa-github"></i>
+                <div class="github slit-in-vertical_1">
+                    <a href="https://github.com/MrBrunotte" target="_blank"> <i class="fab fa-github"></i></a>
                 </div>
-                <div class="linkedin">
-                    <i class="fab fa-linkedin"></i>
+                <div class="linkedin slit-in-vertical_2">
+                    <a href="https://www.linkedin.com/in/stefan-brunotte-44b01521/" target="_blank"> <i
+                            class="fab fa-linkedin"></i></a>
                 </div>
-                <div class="twitter">
-                    <i class="fab fa-twitter"></i>
+                <div class="twitter slit-in-vertical_3">
+                    <a href="https://twitter.com/mrbrunotte" target="_blank"> <i class="fab fa-twitter"></i></a>
                 </div>
             </div><!-- .social-networks-->
-            <div class="copyright">
+            <div class="copyright tracking-in-expand">
                 <p>Stefan Brunotte &copy;
                     <script>document.write(new Date().getFullYear());</script>
                 </p>
             </div>
         </div><!-- .footer-container -->
     </footer><!-- .footer -->
-
+    <script src="./static/js/custom.js"></script>
 </body>
 
 </html>
