@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e89f599854.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/navbar_style.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="icon" href="./img/favicon_ligth_yellow.ico" sizes="16x16" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>StefanBrunotte.com</title>
+</head>
+
+<body>
+    <div id="root">
+        <!-- NAVBAR -->
+        <header class="nav-area">
+            <div class="menu-wrapper">
+                <nav>
+                    <ul class="right-nav">
+                        <li><a href="#">start</a></li>
+                        <li><a href="#">meet me</a></li>
+                        <li><a href="#">experiance</a></li>
+                        <li><a href="#">contact</a></li>
+                        <li class="resume"><a href="#">resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- SIDE CONTAINERS -->
+        <div class="side_container_social">
+            <ul class="social_side_list">
+                <li><a href="#" class="social_link" target="blank" aria-label="GitHub"></a><img class="side_img"
+                        src="/img/github.png" alt="GitHub image"></li>
+                <li><a href="#" class="social_link" target="blank" aria-label="LinkedIn"></a><img class="side_img"
+                        src="/img/linkedin.png" alt="GitHub image"></li>
+                <li><a href="#" class="social_link" target="blank" aria-label="Twitter"></a><img class="side_img"
+                        src="/img/twitter.png" alt="GitHub image"></li>
+            </ul>
+        </div>
+        <div class="side_container_email">
+            <ul class="social_side_list">
+                <li><a href="#" class="social_link" target="blank" aria-label="Email">email</a></li>
+            </ul>
+        </div>
+
+        <!-- MAIN PAGE -->
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            var scroll = $(document).scrollTop();
+            var navHeight = $('.nav-area').outerHeight();
+
+            $(window).scroll(function () {
+
+                var scrolled = $(document).scrollTop();
+
+                if (scrolled > navHeight) {
+                    $('.nav-area').addClass('animate');
+                } else {
+                    $('.nav-area').removeClass('animate');
+                }
+
+                if (scrolled > scroll) {
+                    $('.nav-area').removeClass('sticky');
+                } else {
+                    $('.nav-area').addClass('sticky');
+                }
+
+                scroll = $(document).scrollTop();
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

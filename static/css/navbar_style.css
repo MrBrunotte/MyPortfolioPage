@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400;1,500&display=swap');
+
+/***************************
+###### NAV SETTINGS ########
+***************************/
+.menu-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.nav-area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: top .6s;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    overflow: hidden;
+}
+.menu-wrapper nav{
+    float: right;
+}
+.right-nav {
+    overflow: hidden;
+    list-style: none;
+}
+.right-nav li {
+    float: left;
+    margin-left: 16px;
+}
+.right-nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+ul .resume a {
+    color: black;
+}
+
+/*************************
+###### FOR JQUERY ########
+*************************/
+.nav-area.animate {
+    top: -71px;
+}
+.nav-area.sticky {
+    top: 0;
+    z-index: 99;
+}

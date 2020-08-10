@@ -1,0 +1,650 @@
+/********************
+###### NAVBAR #######
+*********************/
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.flex-row {
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.justify-content-start {
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+headers {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #262626;
+    z-index: 100;
+}
+.header_content {
+    width: 100%;
+    height: 40px;
+}
+.header.scrolled .header_content
+{
+	height: 65px;
+}
+.main_nav {
+    margin-left: 120px;
+}
+.main_nav ul li a {
+    font-size: 11px;
+    font-weight: 900;
+    color: #fff;
+}
+.ul_class {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.nav_list {
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    color:white;
+    margin-right: 40px;
+    display: inherit;
+    font-size: 1rem;
+    text-align: center;
+}
+.nav_list:hover {
+    color: #f99639;
+}
+.highlight {
+    color: #f99639;
+}
+.highlight:hover {
+    color:white;
+}
+
+/* HAMBURGER NAV */
+.hamburger_bar
+{
+	position: fixed;
+	top: 0;
+	right: calc((100vw - 690px) / 2 - 15px);
+	width: auto;
+	height: 101px;
+	z-index: 102;
+}
+.hamburger_bar.scrolled
+{
+	height: 65px;
+}
+.hamburger
+{
+	display: none;
+	position: absolute;
+	top: 15%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 0px;
+	cursor: pointer;
+	padding: 15px;
+	z-index: 2;
+}
+.menu_toggle
+{
+	display: block;
+}
+.menu_hamburger
+{
+	display: block;
+	position: relative;
+	width: 12px;
+	height: 12px;
+}
+.hamburger_lines
+{
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background: #F7F7F7;
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-ms-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+	transform-origin: center center;
+}
+.line_1
+{
+	top: 0px;
+}
+.line_2
+{
+	top: 5px;
+}
+.line_3
+{
+	top: 10px;
+}
+.hamburger.active .line_1
+{
+	transform: translateY(5px) rotate(45deg) !important;
+}
+.hamburger.active .line_3
+{
+	transform: translateY(-5px) rotate(-45deg) !important;
+}
+.hamburger.active .line_2
+{
+	opacity: 0 !important;
+}
+.menu_toggle span
+{
+	display: block;
+	position: relative;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #F7F7F7;
+	margin-top: 1px;
+}
+
+/*
+.box_rotate_left,
+.box_rotate_right {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    border: 2px solid red;
+    overflow: hidden;
+}
+#myDivLeft {
+    -ms-transform: rotate(5deg); 
+    transform: rotate(5deg); 
+}
+#myDivRight {
+    -ms-transform: rotate(175deg);
+    transform: rotate(175deg); 
+}
+*/
+
+/************************
+###### CONTACT ME #######
+*************************/
+
+
+/********************
+###### FOOTER #######
+*********************/
+/* BASIC STYLES */ 
+
+.footer {
+    display: grid;
+    grid-template-columns: 7vw 1fr 7vw;
+    grid-template-rows: auto;
+    color: #fff;
+    background: rgb(124, 124, 124);
+    padding: 20px 0 10px;
+    z-index: 10;
+    position: relative;
+    /*clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);*/
+}
+.footer-container {
+    grid-column: 1 / -1;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "social"; 
+}
+
+.social-networks {
+    padding: 0 0 10px;
+    display: grid;
+    letter-spacing: 1.5px;
+}
+.contact-block {
+    grid-area: contact;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.social-networks {
+    grid-area: social;
+    /* ACTING AS A GRID CONTAINER */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+.social-networks h3 {
+    grid-column: 1 / -1;
+} 
+.github {
+    justify-self: right;
+}
+.twitter {
+    justify-self: left;
+}
+
+.text-input input {
+    border-radius: 0;
+}
+.text-input input:first-child {
+    height: 2rem;
+}
+.text-input input:last-child {
+    height: 2.25rem;
+    color: #fff;
+    border: none;
+    background-color: #f99639;
+    width: 5rem;
+    font-weight: 900;
+}
+.fas, .fab {
+    font-size: 1.5rem;
+}
+.footer a {
+    color: #fff;
+}
+.contact-block a {
+    display: block;
+    border: 2px solid #fff;
+    padding: 0.5rem;
+    margin: 10px 0 0;
+    text-align: center;
+    width: 70%;
+}
+.contact-block a:hover {
+    border: 2px solid #f99639;
+    color: #f99639;
+}
+
+.github:hover,
+.linkedin:hover,
+.twitter:hover {
+    color: #f99639;
+}
+.bottom-line {
+    background-color: #444554;
+}
+.bottom-line, .bottom-line a {
+    color: #fff;
+}
+.copyright {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    padding-top: 10px;
+    letter-spacing: 4px;
+    font-size: 11px;
+}
+
+/**************************
+###### MEDIA QUERIES ######
+***************************/
+
+/*************************************
+1. Hamburger menu below 1190px width
+**************************************/
+
+@media only screen and (max-width: 1190px)
+{
+	.hamburger
+	{
+		display: block;
+	}
+	.hamburger_bar
+	{
+		display: block;
+		right: 125px;
+	}
+	.main_nav
+	{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 960px) {
+    .footer-nav,
+    .footer-secondary-nav { 
+        display: none;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "social";
+        }
+}
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "social";
+        } 
+    .footer-logo,
+    .contact-block {
+        justify-self: center;
+        align-self: center;
+    }
+    .contact-block a,
+    .contact-block p {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .social-networks {
+        margin-bottom: 25px;
+    }
+    .social-networks {
+        border-bottom: none;
+    }
+    .contact-block h3,
+    .social-networks h3 {
+        line-height: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1199px) {
+
+}
+@media only screen and (min-width: 767px) and  (max-width: 991px) {
+
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 575px) {
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 575px) {
+
+}
+
+/* Landscape settings */ 
+
+/* 7. 1024x768 Ipad*/
+@media screen and (max-width: 1024px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 812px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 667px) and (orientation:landscape) {
+
+}
+@media screen and (max-width: 568px) and (orientation:landscape) {
+
+}
+
+/* TESTING #######################################################*/
+
+.img_size {
+    width: 600px;
+    height: auto;
+}
+
+.fade-in {
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+  }@keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+  }
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-7-1 21:21:35
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+.slit-in-vertical_1 {
+	-webkit-animation: slit-in-vertical 0.60s ease-out both;
+	        animation: slit-in-vertical 0.60s ease-out both;
+}
+.slit-in-vertical_2 {
+	-webkit-animation: slit-in-vertical 1.10s ease-out both;
+	        animation: slit-in-vertical 1.10s ease-out both;
+}
+.slit-in-vertical_3 {
+	-webkit-animation: slit-in-vertical 1.30s ease-out both;
+	        animation: slit-in-vertical 1.30s ease-out both;
+}
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.slide-in-top {
+	-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+/*
+ * ----------------------------------------
+ * animation slit-in-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes slit-in-vertical {
+    0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    54% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+    }
+    100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+    }
+}
+@keyframes slit-in-vertical {
+    0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+                transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    54% {
+        -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateZ(0) rotateY(0);
+                transform: translateZ(0) rotateY(0);
+    }
+}
+/*
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+/*
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+                transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* CURRENTLY NOT USED CSS STYLES */
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+/* animation */
+.animated.slide-in-left {
+    animation: slideInLeft 0.75s ease both;
+}
+
+.animated.slide-in-right {
+    animation: slideInRight 0.75s ease both;
+}
+
+.animated.fade-in {
+    animation: fadeIn 0.75s ease both;
+        animation-delay: 0s;
+}
+
+/* @keyframes for animations */
+@keyframes slideInLeft {
+0% {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes slideInRight {
+0% {
+    opacity: 0;
+    transform: translateX(300px);
+}
+100% {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
