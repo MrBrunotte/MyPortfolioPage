@@ -96,10 +96,6 @@ h1, h2, h3, h4, h5, h6
     width: 24px;
     height: 24px;
 }
-.social_link:hover,
-.email_anchor:hover {
-    transform: translateY(-5px);
-}
 .arrow_img {
     width: 24px;
     height: 24px;
@@ -121,7 +117,13 @@ h1, h2, h3, h4, h5, h6
     margin: 20px auto;
     writing-mode: vertical-rl;
 }
-
+.social_link:hover,
+.email_anchor:hover {
+    transform: translateY(-5px);
+}
+.email_anchor:hover {
+    font-weight: 500;
+}
 /********************
 ###### MY WORK ######
 *********************/

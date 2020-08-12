@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5, h6
 .landingpage_anchors {
     top: 50%;
     left: 50%;
-    letter-spacing: 25px;
 }
 
 .landingpage_anchors a {
@@ -65,12 +64,20 @@ h1, h2, h3, h4, h5, h6
     /*padding: 10px 25px;
     border-radius: 5px;*/
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 250px;
 }
-.landingpage_anchors a:hover {
-    color:white;
+.hover_color {
+    letter-spacing: 25px;
+    border: solid 2px #D9B08C;
+    border-radius: 15px;
+    padding: 15px 30px;
+}
+.hover_color:hover {
+    color: #f99639;
+    border: solid 3px #f99639;
     background: none;
 }
+
 
 /* Animation */
 span:before {
@@ -79,7 +86,7 @@ span:before {
     letter-spacing: 3px;
     animation: animate infinite 15s;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 100px;
     margin-bottom: 20px;
     letter-spacing: 8px;
 }
@@ -91,6 +98,11 @@ span:before {
     text-shadow: 0 2px 0 rgba(0,0,0,0.5);
     font-size: 60px;
     letter-spacing: 0px;
+}
+
+.p_text {
+    color: #D9B08C;
+    font-size: 40px;
 }
 
 @keyframes animate {
@@ -111,7 +123,7 @@ span:before {
         color: #f99639;
     }
     100% {
-        content: 'proud dad';
+        content: 'a proud dad';
         color: #f99639;
     }
 }
