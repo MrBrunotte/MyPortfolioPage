@@ -15,7 +15,7 @@
     width: 100%;
     box-sizing: border-box;
     transition: top .6s;
-    background: rgba(0, 0, 0, 0);
+    background: rgb(217, 176, 140);
     padding: 10px;
     overflow: hidden;
 }
@@ -31,15 +31,25 @@
     margin-left: 16px;
 }
 .right-nav li a {
-    color: #fff;
+    color: #686161;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
 }
+.right-nav li a:hover{
+    color: black;
+    border-bottom: 1px solid black;
+}
 ul .resume a {
     color: black;
+}
+ul .resume a:hover {
+    color:#686161;
+    border: 1px solid #686161;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 /*************************

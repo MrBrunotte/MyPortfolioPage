@@ -1,121 +1,55 @@
 /* JS Document */
 
-/******************************
+/* Back to top button */
+const backToTopButton = document.querySelector("#back-to-top-btn");
 
-[Table of Contents]
+window.addEventListener("scroll", scrollFunction);
 
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Video
-5. Init Gallery
-6. Bootstrap Modal
-
-
-******************************/
-
-$(document).ready(function () {
-    "use strict";
-
-	/* 
-
-	1. Vars and Inits
-
-	*/
-
-    var header = $('.header');
-    var hamburgerBar = $('.hamburger_bar');
-    var hamburger = $('.hamburger');
-
-    setHeader();
-
-    $(window).on('resize', function () {
-        setHeader();
-
-        setTimeout(function () {
-            $(window).trigger('resize.px.parallax');
-        }, 375);
-    });
-
-    $(document).on('scroll', function () {
-        setHeader();
-    });
-
-
-    initGallery();
-    initMenu();
-
-	/* 
-
-	2. Set Header
-
-	*/
-
-    function setHeader() {
-        if ($(window).scrollTop() > 91) {
-            header.addClass('scrolled');
-            hamburgerBar.addClass('scrolled');
-        }
-        else {
-            header.removeClass('scrolled');
-            hamburgerBar.removeClass('scrolled');
-        }
+function scrollFunction() {
+  if (window.pageYOffset > 300) { // Show backToTopButton when scrolled 300px vertical
+    if(!backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
     }
-
-	/* 
-
-	3. Init Menu
-
-	*/
-
-    function initMenu() {
-        if ($('.menu').length) {
-            var menu = $('.menu');
-            hamburger.on('click', function () {
-                hamburger.toggleClass('active');
-                menu.toggleClass('active');
-            });
-        }
+  }
+  else { // Hide backToTopButton
+    if(backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnEntrance");
+      backToTopButton.classList.add("btnExit");
+      setTimeout(function() {
+        backToTopButton.style.display = "none";
+      }, 250);
     }
+  }
+}
 
-	/* 
+backToTopButton.addEventListener("click", smoothScrollBackToTop);
 
-	5. Init Gallery
+// function backToTop() {
+//   window.scrollTo(0, 0);
+// }
 
-	*/
+function smoothScrollBackToTop() {
+  const targetPosition = 0;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 750;
+  let start = null;
+  
+  window.requestAnimationFrame(step);
 
-    function initGallery() {
-        if ($('.gallery_slider').length) {
-            var gallery = $('.gallery_slider');
-            gallery.owlCarousel(
-                {
-                    autoplay: true,
-                    loop: true,
-                    smartSpeed: 1200,
-                    nav: false,
-                    dots: false,
-                    center: true,
-                    responsive:
-                    {
-                        0:
-                        {
-                            items: 3
-                        },
-                        991:
-                        {
-                            items: 5
-                        }
-                    }
-                });
-        }
-    }
-	/* 
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+}
 
-	6. Bootstrap modal
-
-	*/
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus');
-    });
-
-});
+function easeInOutCubic(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2*t*t*t + b;
+	t -= 2;
+	return c/2*(t*t*t + 2) + b;
+};
