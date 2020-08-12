@@ -125,5 +125,52 @@ h1, h2, h3, h4, h5, h6
     font-weight: 500;
 }
 /********************
-###### MY WORK ######
+###### MAIN PAGE ######
 *********************/
+
+/***** Crocked images container *****/
+
+/*  justify-* is the ROW y-axis (top to bottom)
+    align-* is the COLUMN x-axis (left to right)
+*/
+.image_container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    justify-items: center;
+    align-items: center;
+}
+.wos,
+.vac,
+.foo {
+    height: 200px;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+    background-color: white;
+    -webkit-box-shadow: 20px 15px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px 15px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 20px 15px 5px 0px rgba(0,0,0,0.75);
+}
+.wos {
+    background-image: url(/img//worldofshape.JPG);
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+    transform: rotate(-15deg);
+    z-index: 103;
+}
+.vac {
+    background-image: url(/img/vacationexplorer.JPG);
+    grid-column: 5 / -5;
+    grid-row: 2 / 3;
+    transform: rotate(9deg);
+    z-index: 102;
+}
+.foo {
+    background-image: url(/img/foodictionary.JPG);
+    grid-column: 8 / -2;
+    grid-row: 1 / 3;
+    transform: rotate(-10deg);
+    z-index: 101;
+}
