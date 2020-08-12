@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6
 .main_container {
     /* display: grid;
     grid-template-columns: 100px repeat(12, 1fr) 100px; */
-    padding: 200px 150px 200px 150px;
+    padding: 200px 150px 10px 150px;
 }
 
 /***** First container (landingpage) *****/
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6
     display: flex;
     justify-content: start;
     align-items: flex-start;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 10px);
     max-width: 1000px;
 }
 .title_left {
@@ -280,16 +280,15 @@ h1, h2, h3, h4, h5, h6
     color: black;
     background-color:rgb(217, 176, 140);
     border: none;
-    margin-top: 50px;
-    font-size: 24px;
+    font-size: 15px;
     height: 35px;
     transform: rotate(-90deg);
 }
 #back-to-top-btn {
     display:none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 60%;
+    right: -20px;
     cursor: pointer;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
@@ -297,14 +296,14 @@ h1, h2, h3, h4, h5, h6
 }
 #back-to-top-btn:hover,
 #back-to-top-btn:focus {
-    font-size: 40px;
+    font-weight: 900;
 }
 /***** Contact section *****/
 .contact_section {
     text-align: center;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 25px);
 }
-.contact_header {
+.section_header {
     width: 100%;
     height: 50px;
     margin: 50px 0;
@@ -313,7 +312,7 @@ h1, h2, h3, h4, h5, h6
     position: relative;
 }
 
-.contact_header:after {
+.section_header:after {
     content: '';
     width: 100%;
     border-bottom: solid 1px black;
@@ -322,7 +321,7 @@ h1, h2, h3, h4, h5, h6
     top: 66%;
     z-index: 1;
 }
-.contact {
+.section_header_h1 {
     background-color: #D9B08C;
     width: auto;
     display: inline-block;
@@ -350,6 +349,24 @@ h1, h2, h3, h4, h5, h6
     width: 50px;
     margin: 25px 25px 0px;
     padding-bottom: 10px;
+}
+.p_text {
+    margin-bottom: 10px;
+}
+.p_text span {
+    font-weight: 900;
+}
+.strong {
+    font-weight: 900;
+}
+
+/***** Footer section *****/
+.footer {
+    text-align: center;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /***** MEIDA QUERIES *****/
