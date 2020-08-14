@@ -190,7 +190,8 @@ h1, h2, h3, h4, h5, h6
 .wos,
 .vac,
 .foo {
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     color: white;
     font-weight: 900;
     background-color: white;
@@ -209,7 +210,7 @@ h1, h2, h3, h4, h5, h6
     justify-content: center;
 }
 .vac_grid {
-    grid-column: 6 / 9;
+    grid-column: 4 / 9;
     grid-row: 1;
     transform: rotate(9deg);
     z-index: 102;
@@ -278,8 +279,8 @@ h1, h2, h3, h4, h5, h6
 .meet_me_grid {
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(25, auto);
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(6, auto);
 }
 
 /* Subgrid left */
@@ -288,16 +289,16 @@ h1, h2, h3, h4, h5, h6
     grid-gap: 5px 15px;
     grid-template-columns: repeat(4, minmax(10px, auto));
     grid-template-rows: repeat(2, auto);
-    grid-column: 1/6;
+    grid-column: 1/13;
     grid-row: 2;
 }
 .meet_me_header_left {
-    grid-column: 1/6;
+    grid-column: 1/12;
     grid-row: 1;
     text-align: start;
 }
 .exp_software_header { 
-    grid-column: 1/3;
+    grid-column: 1/6;
     grid-row: 1;
 }
 .exp_software_header,
@@ -313,7 +314,7 @@ h1, h2, h3, h4, h5, h6
     font-size: 13px;
 }
 .sw_li { 
-    grid-column: 1/3;
+    grid-column: 1/6;
     grid-row: 2;
 }
 .exp_frame_lib_header {
@@ -346,55 +347,118 @@ h1, h2, h3, h4, h5, h6
     font-size: 10px;
 }
 /* right side */
-.meet_me_header_right {
-    grid-column: 7 /12;
-    grid-row: 1;
-    text-align: start;
-}
-.prof_text {
-    grid-column: 7/12;
-    grid-row: 2/4;
-}
-.my_qualities {
-    grid-column: 7/12;
+/* grid qualities */
+.qualities_grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(12, minmax(10px, auto));
+    grid-template-rows: repeat(12, auto);
+    grid-column: 14/-1;
     grid-row: 4;
 }
-.quality_left,
-.quality_right {
+.my_qualities {
+    grid-column: 1/12;
+    grid-row: 1;
+    margin-top: 55px;
+}
+.q_list_item {
+    background-color: transparent;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px 10px;
+}
+.q_list_item:hover {
+    color: white;
+    font-weight: 400;
+    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
+    font-style: italic;
+    letter-spacing: 1.1px;
+}
+.q_list_item::before {
+    content: '- '
+}
+.q_list_item::after {
+    content: ' -'
+}
+.q1 { grid-column: 1/7; grid-row: 2; background-color: #846b567a;}
+.q2 { grid-column: 7/-1; grid-row: 2; background-color: #846b567a;}
+.q3 { grid-column: 1/6; grid-row: 6; background-color: #846b567a;}
+.q4 { grid-column: 3/-3; grid-row: 3; background-color: #846b567a;}
+.q5 { grid-column: 1/6; grid-row: 4; background-color: #846b567a;}
+.q6 { grid-column: 6/-1; grid-row: 4; background-color: #846b567a;}
+.q7 { grid-column: 2/11; grid-row: 5; background-color: #846b567a;}
+.q8 { grid-column: 6/-1; grid-row: 6; background-color: #846b567a;}
+
+.quality_lefty,
+.quality_righty {
+    display: grid;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     font-style: italic;
     line-height: 28px;
     letter-spacing: 1.5px;
 }
-.quality_left {
-    grid-column: 7/10;
+.quality_leftz {
+    grid-column: 1/5;
+    grid-row: 2;
+}
+.quality_rightz {
+    grid-column: 20/24;
     grid-row: 5/7;
 }
-.quality_right {
-    grid-column: 10/13;
-    grid-row: 5/7;
+
+.meet_me_header_right {
+    grid-column: 14/24;
+    grid-row: 1;
+    text-align: start;
 }
+.prof_text {
+    grid-column: 14/24;
+    grid-row: 2/4;
+}
+
 .meet_me_aw_header {
-    grid-column: 7/12;
-    grid-row: 7;
+    grid-column: 14/24;
+    grid-row: 5;
 }
 .aw_text {
-    grid-column: 7/12;
-    grid-row: 8;
+    grid-column: 14/24;
+    grid-row: 6;
 }
-/*  justify-* is the ROW y-axis (top to bottom)
-    align-* is the COLUMN x-axis (left to right)
+.aw::before {
+    content: open-quote;
+    font-size: 26px;
+}
+.aw::after {
+    content: close-quote;
+    font-size: 26px;
+}
+.img_me {
+    display: grid;
+    grid-column: 4/10;
+    grid-row: 4;
+    height: auto;
+    max-width: 100%;
+    justify-self: center;
+    align-self: start;
+    box-shadow: 20px 15px 5px 0px rgba(0,0,0,0.75);
+}
+/*  align-* is the ROW y-axis (top to bottom)
+    justify-* is the COLUMN x-axis (left to right)
 */
 .text_message {
-    grid-column: 1/6;
-    grid-row: 8;
-    margin-top: 35px;
+    grid-column: 2/12;
+    grid-row: 6/9;
+    width: 80%;
     font-style: italic;
     font-family: 'Fauna One', serif;
     font-weight: 900;
     text-align: center;
     line-height: 36px;
+    justify-self: center;
+    align-self: stretch;
 }
 .text_message::before {
     content: open-quote;
@@ -405,52 +469,33 @@ h1, h2, h3, h4, h5, h6
     font-size: 35px;
 }
 
-/* The Modal */
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/***** Projects section *****/
+.projects_header_text{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, auto);
 }
-#myBtn {
-    font-weight: 500;
-    font-size: 16px;
-    cursor: pointer;
+.project_grid_leftside {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-column: 1/12;
+    grid-row: 1/6;
 }
-
-/* Modal Content/Box */
-.modal-content {
-    margin-top:5%;
-    margin-left: 20%;
-    padding: 20px;
-}
-.modal_img {
-    border-radius: 5px;
+.project_img_parent {
+    grid-column: 1/9;
+    grid-row: 1;
+    overflow: hidden;
+    justify-self: start;
 }
 
-/* The Close Button */
-.close {
-    color: black;
-    border: none;
-    font-size: 15px;
-    height: 35px;
-    writing-mode: sideways-lr;
+.project_img {
+    max-width: 100%;
+    height: auto;
 }
 
-.close:hover,
-.close:focus {
-    color: white;
-    font-size: 35px;
-    text-decoration: none;
-    cursor: pointer;
-} 
 /***** Contact section *****/
 
 .contact_section {
@@ -522,6 +567,57 @@ h1, h2, h3, h4, h5, h6
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/***** Modal section *****/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#myBtn {
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 0 auto;
+    padding: 20px;
+    width: 290px;
+    height: 320px;
+}
+.modal_img {
+    border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 7px 14px;
+    border: none;
+    font-size: 15px;
+    height: 35px;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+} 
 
 /***** MEIDA QUERIES *****/
 
