@@ -20,19 +20,14 @@ html {
 }
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #D9B08C;
+    background-color: #B0A48D;
     min-height: 100vh;
     width: 100%;
     line-height: 1.3;
 }
-/*div {
-	display: block;
-	position: relative;
+p {
+    color: #695A3D;
 }
-section {
-	display: block;
-	position: relative;
-}*/
 ul {
 	list-style: none;
 	margin-bottom: 0px;
@@ -41,12 +36,12 @@ li {
     list-style-type: none;
 }
 a {
+    color: #695A3D;
     text-decoration: none;
     text-decoration-skip-ink: auto;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     position: relative;
-    color: inherit;
     display: inline-block;
 }
 h1{font-size: 48px;}
@@ -56,21 +51,27 @@ h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	line-height: 1.2;
+    line-height: 1.2;
+    color: #423C2F
 }
 
 /****************************
 ###### SIDE CONTAINERS ######
 ****************************/
-.side_container_social {
+.side_container_social,
+.side_container_email {
     width: 40px;
     position: fixed;
-    bottom: 0px;
-    left: 40px;
+    bottom: 100px;
     right: auto;
     z-index: 10;
-    color: black;
     list-style: outside none none;
+}
+.side_container_social {
+    left: 40px;
+}
+.side_container_email {
+    right: 40px;
 }
 .side_container_social::after,
 .side_container_email::after {
@@ -80,15 +81,6 @@ h1, h2, h3, h4, h5, h6
     height: 200px;
     margin: 0 auto;
     background-color: black;
-}
-.side_container_email {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    right: 40px;
-    z-index: 10;
-    color: black;
-    list-style: outside none none;
 }
 .side_img {
     margin: 0px 0px 20px;
@@ -118,6 +110,7 @@ h1, h2, h3, h4, h5, h6
     letter-spacing: 0.1em;
     margin: 20px auto;
     writing-mode: vertical-rl;
+    color: inherit;
 }
 .social_link:hover,
 .email_anchor:hover {
@@ -132,9 +125,14 @@ h1, h2, h3, h4, h5, h6
 
 /***** Root container *****/
 .main_container {
-    /* display: grid;
-    grid-template-columns: 100px repeat(12, 1fr) 100px; */
-    padding: 200px 150px 10px 150px;
+    margin: 40px 100px;
+    padding: 65px 100px 10px;
+    background-color: #E2CA9B;
+}
+.center_bg {
+    background-color: #B0A48D;
+    width: 100%;
+    padding: 25px;
 }
 
 /***** First container (landingpage) *****/
@@ -151,7 +149,6 @@ h1, h2, h3, h4, h5, h6
     max-width: 1000px;
 }
 .title_left {
-    color: black;
     margin: 0px 0px 20px 3px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -160,9 +157,8 @@ h1, h2, h3, h4, h5, h6
 .name {
     font-size: 80px;
     line-height: 1.1;
-    margin: 0px;
+    margin: 15px 0;
 }
-
 .name_text {
     margin-top: 25px;
     width: 100%;
@@ -185,14 +181,13 @@ h1, h2, h3, h4, h5, h6
     grid-template-rows: 300px 50px;
     justify-items: center;
     align-items: center;
-    padding: 80px 0px 0px;
+    padding: 130px 0px 0px;
 }
 .wos,
 .vac,
 .foo {
     max-width: 100%;
     height: auto;
-    color: white;
     font-weight: 900;
     background-color: white;
     align-self: end;
@@ -221,15 +216,7 @@ h1, h2, h3, h4, h5, h6
     transform: rotate(-10deg);
     z-index: 101;
 }
-.arrow_down {
-    font-size: 38px;
-    transform: rotate(90deg);
-    grid-column: 1 / -1;
-    grid-row: 2;
-}
-
 .arrow_up {
-    color: black;
     background-color:rgb(217, 176, 140);
     border: none;
     font-size: 15px;
@@ -242,6 +229,7 @@ h1, h2, h3, h4, h5, h6
     bottom: 60%;
     right: -20px;
     cursor: pointer;
+    background-color: transparent;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-property: background-color, color;
@@ -251,6 +239,9 @@ h1, h2, h3, h4, h5, h6
     font-weight: 900;
 }
 /***** Meet me section *****/
+.meet_me_container {
+    padding-top: 50px;
+}
 .meet_me_header {
     text-align: center;
 }
@@ -370,11 +361,7 @@ h1, h2, h3, h4, h5, h6
     padding: 5px 10px;
 }
 .q_list_item:hover {
-    color: white;
-    font-weight: 400;
     box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    font-style: italic;
-    letter-spacing: 1.1px;
 }
 .q_list_item::before {
     content: '- '
@@ -435,6 +422,7 @@ h1, h2, h3, h4, h5, h6
     content: close-quote;
     font-size: 26px;
 }
+
 .img_me {
     display: grid;
     grid-column: 4/10;
@@ -444,6 +432,12 @@ h1, h2, h3, h4, h5, h6
     justify-self: center;
     align-self: start;
     box-shadow: 20px 15px 5px 0px rgba(0,0,0,0.75);
+}
+.blur {
+    opacity: 0.6;
+}
+.blur:hover{
+    opacity: 1;
 }
 /*  align-* is the ROW y-axis (top to bottom)
     justify-* is the COLUMN x-axis (left to right)
@@ -470,6 +464,10 @@ h1, h2, h3, h4, h5, h6
 }
 
 /***** Projects section *****/
+.projects_section {
+    height: calc(100vh - 80px);
+    padding-top: 10px;
+}
 .projects_header_text{
     display: grid;
     grid-gap: 5px;
@@ -505,12 +503,14 @@ h1, h2, h3, h4, h5, h6
     grid-column: 8/13;
     grid-row: 2/3;
     justify-self: end;
+    z-index: 1;
 }
 .project_description {
     grid-column: 5/13;
     grid-row: 3/6;
     z-index: 1;
-    background-color: aquamarine;
+    background-color: #6D7A97;
+    color: #2C3446;
     padding: 25px;
     border-radius: 5px;
     min-height: 150px;
@@ -532,49 +532,57 @@ h1, h2, h3, h4, h5, h6
     grid-column: 7/8;
     grid-row: 6/7;
     justify-self: end;
+    z-index: 1;
 }
 .technology2 {
     grid-column: 9/11;
     grid-row: 6/7;
     justify-self: end;
+    z-index: 1;
 }
 .technology3 {
     grid-column: 10/13;
     grid-row: 6/7;
     justify-self: end;
+    z-index: 1;
 }
 
 /***** Contact section *****/
 
 .contact_section {
     text-align: center;
-    height: calc(100vh - 25px);
+    height: calc(100vh - 80px);
 }
 .section_header {
     width: 100%;
     height: 50px;
-    margin: 50px 0;
+    margin: 50px;
     text-align: center;
     font-size: 28px;
     position: relative;
 }
-
+.section_header:before,
 .section_header:after {
     content: '';
-    width: 100%;
-    border-bottom: solid 1px black;
+    width: 30%;
+    border-bottom: solid 2px#423C2F;
     position: absolute;
-    left: 0;
-    top: 66%;
+    bottom: 0%;
     z-index: 1;
 }
+.section_header:before {
+    left: 0;
+}
+.section_header:after {
+    right: 0;
+}
 .section_header_h1 {
-    background-color: #D9B08C;
+    background-color: #D9B08C00;
     width: auto;
     display: inline-block;
     z-index: 3;
     padding: 0 20px 0 20px;
-    color: black;
+    margin-top: 50px;
     position: relative;
     font-weight: 400;
     margin: 0;
@@ -650,7 +658,6 @@ h1, h2, h3, h4, h5, h6
 /* The Close Button */
 .close {
     background-color: black;
-    color: white;
     text-align: center;
     border-radius: 5px;
     padding: 7px 14px;

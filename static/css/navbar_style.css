@@ -13,9 +13,10 @@
     left: 0;
     top: 0;
     width: 100%;
+    height: 40px;
     box-sizing: border-box;
     transition: top .6s;
-    background: rgb(217, 176, 140);
+    background: #B0A48D;
     padding: 10px;
     overflow: hidden;
 }
@@ -31,7 +32,7 @@
     margin-left: 16px;
 }
 .right-nav li a {
-    color: #686161;
+    color: #695A3D;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -39,14 +40,14 @@
     text-transform: uppercase;
 }
 .right-nav li a:hover{
-    color: black;
+    color: #2C3446;
     border-bottom: 1px solid black;
 }
 ul .resume a {
-    color: black;
+    color: #423C2F;
 }
 ul .resume a:hover {
-    color:#686161;
+    color:#695A3D;
     border: 1px solid #686161;
     border-radius: 5px;
     padding: 5px 10px;
