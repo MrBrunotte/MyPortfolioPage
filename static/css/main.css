@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6
     width: 2px;
     height: 200px;
     margin: 0 auto;
-    background-color: #2c3531;
+    background-color: whitesmoke;
 }
 .side_img {
     margin: 0px 0px 20px;
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6
     letter-spacing: 0.3em;
     margin: 20px auto;
     writing-mode: vertical-rl;
-    color: #2c3531;
+    color: whitesmoke;
 }
 
 .social_link:hover,
@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6
 }
 #back-to-top-btn:hover,
 #back-to-top-btn:focus {
-    font-weight: 900;
+    color: whitesmoke;
 }
 /***** Meet me section *****/
 .meet_me_container {
@@ -607,23 +607,27 @@ h1, h2, h3, h4, h5, h6
     font-weight: 400;
     margin: 0;
 }
+.contact_img_github,
+.contact_img_linkedin,
+.contact_img_twitter {
+    width: 50px;
+    margin: 25px 25px 0px;
+    padding-bottom: 10px;
+}
+.contact_img_github:hover,
+.contact_img_linkedin:hover,
+.contact_img_twitter:hover {
+    border-bottom: 2px solid whitesmoke;
+    transform: translateY(-5px);
+}
 .contact_email_img {
     content: url(/img/email150x150.png);
     width: 100px;
     height: 100px;
     margin-top: 90px;
 }
-.contact_img:hover {
-    border-bottom: 2px solid black;
-    transform: translateY(-5px);
-}
 .contact_email_img:hover {
-    content: url(/img/email_open170x170.png);
-}
-.contact_img {
-    width: 50px;
-    margin: 25px 25px 0px;
-    padding-bottom: 10px;
+    content: url(/img/email_open_white170.png);
 }
 .p_text {
     margin-bottom: 10px;
