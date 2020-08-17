@@ -2,7 +2,7 @@
 /********************
 ###### FONTS ########
 *********************/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 /*******************************
 ###### GENERAL SETTINGS ########
@@ -19,14 +19,17 @@ html {
     box-sizing: inherit;
 }
 body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #B0A48D;
+    font-family: 'Do Hyeon', sans-serif;
+    /*background-color: #2c3531;+*/
+    background-color: #2c3531d1;
     min-height: 100vh;
     width: 100%;
     line-height: 1.3;
+    letter-spacing: 0.07em;
 }
 p {
-    color: #695A3D;
+    /*color: #695A3D;*/
+    color: whitesmoke;
 }
 ul {
 	list-style: none;
@@ -36,7 +39,7 @@ li {
     list-style-type: none;
 }
 a {
-    color: #695A3D;
+    color: #97886B;
     text-decoration: none;
     text-decoration-skip-ink: auto;
     cursor: pointer;
@@ -52,7 +55,7 @@ h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
     line-height: 1.2;
-    color: #423C2F
+    color: whitesmoke
 }
 
 /****************************
@@ -80,7 +83,7 @@ h1, h2, h3, h4, h5, h6
     width: 2px;
     height: 200px;
     margin: 0 auto;
-    background-color: black;
+    background-color: #2c3531;
 }
 .side_img {
     margin: 0px 0px 20px;
@@ -105,13 +108,13 @@ h1, h2, h3, h4, h5, h6
     align-items: center;
 }
 .email_anchor {
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.3em;
     margin: 20px auto;
     writing-mode: vertical-rl;
-    color: inherit;
+    color: #2c3531;
 }
+
 .social_link:hover,
 .email_anchor:hover {
     transform: translateY(-5px);
@@ -125,9 +128,10 @@ h1, h2, h3, h4, h5, h6
 
 /***** Root container *****/
 .main_container {
-    margin: 40px 100px;
-    padding: 65px 100px 10px;
-    background-color: #E2CA9B;
+    margin: 0px 100px;
+    padding: 0px 100px 10px;
+    border-radius: 5px;
+    background-color: #2c3531;
 }
 .center_bg {
     background-color: #B0A48D;
@@ -150,7 +154,7 @@ h1, h2, h3, h4, h5, h6
 }
 .title_left {
     margin: 0px 0px 20px 3px;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-weight: 400;
     font-size: 16px;
 }
@@ -158,6 +162,7 @@ h1, h2, h3, h4, h5, h6
     font-size: 80px;
     line-height: 1.1;
     margin: 15px 0;
+    letter-spacing: 0.1em;
 }
 .name_text {
     margin-top: 25px;
@@ -181,7 +186,10 @@ h1, h2, h3, h4, h5, h6
     grid-template-rows: 300px 50px;
     justify-items: center;
     align-items: center;
-    padding: 130px 0px 0px;
+    margin: 130px 0px 0px;
+    padding: 20px 40px 0px;
+    background-color: #d1e8e2;
+    border-radius: 5px;
 }
 .wos,
 .vac,
@@ -189,6 +197,7 @@ h1, h2, h3, h4, h5, h6
     max-width: 100%;
     height: auto;
     font-weight: 900;
+    border-radius: 5px;
     background-color: white;
     align-self: end;
     cursor: pointer;
@@ -226,7 +235,7 @@ h1, h2, h3, h4, h5, h6
 #back-to-top-btn {
     display:none;
     position: fixed;
-    bottom: 60%;
+    bottom: 8%;
     right: -20px;
     cursor: pointer;
     background-color: transparent;
@@ -252,7 +261,7 @@ h1, h2, h3, h4, h5, h6
     width: 80%;
     margin: 0 auto;
     font-style: italic;
-    font-family: 'Fauna One', serif;
+    /*font-family: 'Fauna One', serif;*/
     font-weight: 900;
     text-align: center;
     line-height: 36px;
@@ -335,17 +344,19 @@ h1, h2, h3, h4, h5, h6
 .fw_li,
 .sc_li,
 .db_li {
+    color: whitesmoke;
     font-size: 10px;
 }
 /* right side */
 /* grid qualities */
 .qualities_grid {
     display: grid;
-    grid-gap: 15px;
+    grid-gap: 15px 0px;
     grid-template-columns: repeat(12, minmax(10px, auto));
-    grid-template-rows: repeat(12, auto);
+    grid-template-rows: repeat(6, auto);
     grid-column: 14/-1;
     grid-row: 4;
+    margin-bottom: 30px;
 }
 .my_qualities {
     grid-column: 1/12;
@@ -354,14 +365,16 @@ h1, h2, h3, h4, h5, h6
 }
 .q_list_item {
     background-color: transparent;
+    color: whitesmoke;
+    font-size: 15px;
+    /*font-family: 'Fauna One', serif;*/
+    font-style: italic;
     font-weight: 900;
     border: none;
-    border-radius: 5px;
-    margin: 2px;
     padding: 5px 10px;
 }
 .q_list_item:hover {
-    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
+    font-weight: bold;
 }
 .q_list_item::before {
     content: '- '
@@ -369,14 +382,14 @@ h1, h2, h3, h4, h5, h6
 .q_list_item::after {
     content: ' -'
 }
-.q1 { grid-column: 1/7; grid-row: 2; background-color: #846b567a;}
-.q2 { grid-column: 7/-1; grid-row: 2; background-color: #846b567a;}
-.q3 { grid-column: 1/6; grid-row: 6; background-color: #846b567a;}
-.q4 { grid-column: 3/-3; grid-row: 3; background-color: #846b567a;}
-.q5 { grid-column: 1/6; grid-row: 4; background-color: #846b567a;}
-.q6 { grid-column: 6/-1; grid-row: 4; background-color: #846b567a;}
-.q7 { grid-column: 2/11; grid-row: 5; background-color: #846b567a;}
-.q8 { grid-column: 6/-1; grid-row: 6; background-color: #846b567a;}
+.q1 { grid-column: 1/7; grid-row: 2; }
+.q2 { grid-column: 7/-1; grid-row: 2;}
+.q3 { grid-column: 1/6; grid-row: 6;}
+.q4 { grid-column: 3/-3; grid-row: 3;}
+.q5 { grid-column: 1/6; grid-row: 4;}
+.q6 { grid-column: 6/-1; grid-row: 4;}
+.q7 { grid-column: 2/11; grid-row: 5;}
+.q8 { grid-column: 6/-1; grid-row: 6;}
 
 .quality_lefty,
 .quality_righty {
@@ -414,19 +427,13 @@ h1, h2, h3, h4, h5, h6
     grid-column: 14/24;
     grid-row: 6;
 }
-.aw::before {
-    content: open-quote;
-    font-size: 26px;
-}
-.aw::after {
-    content: close-quote;
-    font-size: 26px;
-}
+
 
 .img_me {
     display: grid;
     grid-column: 4/10;
     grid-row: 4;
+    border-radius: 5px;
     height: auto;
     max-width: 100%;
     justify-self: center;
@@ -447,20 +454,24 @@ h1, h2, h3, h4, h5, h6
     grid-row: 6/9;
     width: 80%;
     font-style: italic;
-    font-family: 'Fauna One', serif;
+    /*font-family: 'Fauna One', serif;*/
     font-weight: 900;
     text-align: center;
     line-height: 36px;
     justify-self: center;
     align-self: stretch;
 }
-.text_message::before {
-    content: open-quote;
+.quotes::before,
+.quotes::after {
     font-size: 35px;
+    font-weight: 100;
 }
-.text_message::after {
+.quotes::before {
+    content: open-quote;
+}
+.quotes::after {
     content: close-quote;
-    font-size: 35px;
+    
 }
 
 /***** Projects section *****/
@@ -492,6 +503,7 @@ h1, h2, h3, h4, h5, h6
 .project_img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 .featured_project {
     grid-column: 9/13;
@@ -500,7 +512,7 @@ h1, h2, h3, h4, h5, h6
     margin-top: 41px;
 }
 .project_name {
-    grid-column: 8/13;
+    grid-column: 7/13;
     grid-row: 2/3;
     justify-self: end;
     z-index: 1;
@@ -509,8 +521,8 @@ h1, h2, h3, h4, h5, h6
     grid-column: 5/13;
     grid-row: 3/6;
     z-index: 1;
-    background-color: #6D7A97;
-    color: #2C3446;
+    background-color: #d1e8e2;
+    color: #2c3531;
     padding: 25px;
     border-radius: 5px;
     min-height: 150px;
@@ -518,15 +530,22 @@ h1, h2, h3, h4, h5, h6
 .project_github,
 .project_link {
     margin-top: 15px;
+    justify-self: center;
+    align-self: flex-end;
 }
 .project_github {
     grid-column: 11/12;
     grid-row: 7/8;
 }
+.github_bg {
+    background-color: #525956;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%
+}
 .project_link {
     grid-column: 12/13;
     grid-row: 7/8;
-    justify-self: end;
 }
 .technology1 {
     grid-column: 7/8;
@@ -564,8 +583,9 @@ h1, h2, h3, h4, h5, h6
 .section_header:before,
 .section_header:after {
     content: '';
+    color: whitesmoke;
     width: 30%;
-    border-bottom: solid 2px#423C2F;
+    border-bottom: solid 2px whitesmoke;
     position: absolute;
     bottom: 0%;
     z-index: 1;
@@ -639,9 +659,15 @@ h1, h2, h3, h4, h5, h6
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 #myBtn {
-    font-weight: 500;
+    color: #97886B;
+    font-weight: 900;
     font-size: 16px;
     cursor: pointer;
+}
+#myBtn:hover {
+    text-decoration: underline;
+    font-weight: 900;
+    transform: translateY(-5px);
 }
 
 /* Modal Content/Box */
