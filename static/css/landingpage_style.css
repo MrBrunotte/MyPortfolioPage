@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6
 
 .landingpage_anchors a {
     /*background: rgba(128, 128, 128, 0.20);*/
-    color: #D9B08C;
+    color: #f5f5f561;
     font-weight: 900;
     letter-spacing: 3px;
     text-decoration: none;
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6
     padding: 15px 30px;
 }
 .hover_color:hover {
-    color: #f99639;
+    color: whitesmoke;
     background: none;
 }
 
@@ -93,37 +93,37 @@ span:before {
 .landingpage_wrapper h2 {
     padding: 0;
     margin-bottom: 30px;
-    color: #D9B08C;
+    color:#f5f5f561;
     text-shadow: 0 2px 0 rgba(0,0,0,0.5);
     font-size: 60px;
     letter-spacing: 0px;
 }
 
 .p_text {
-    color: #D9B08C;
+    color: #f5f5f561;
     font-size: 40px;
 }
 
 @keyframes animate {
     0% {
         content: 'stefan brunotte';
-        color: #f99639;
+        color: rgba(245, 245, 245, 0.65);
     }
     30% {
         content: 'a full stack developer';
-        color: #f99639;
+        color: rgba(245, 245, 245, 0.65);
     }
     60% {
         content: 'a quick lerner';
-        color: #f99639;
+        color: rgba(245, 245, 245, 0.65);
     }
     90% {
         content: 'a team player';
-        color: #f99639;
+        color: rgba(245, 245, 245, 0.65);
     }
     100% {
         content: 'a proud dad';
-        color: #f99639;
+        color: rgba(245, 245, 245, 0.65);
     }
 }
 
