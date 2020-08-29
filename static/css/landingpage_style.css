@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6
 ###### LANDINGPAGE ######
 *************************/
 .landingpage_body {
+    background-color: #2c3531;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -132,49 +133,51 @@ span:before {
 ***************************/
 
 
-@media only screen and (min-width: 1199px) {
-
+@media only screen and (min-width: 992px) {
+    .mobile_text {
+        display: none;
+    }
 }
-@media only screen and (min-width: 767px) and  (max-width: 991px) {
-
+@media only screen and (max-width: 991px) {
+    .landingpage_wrapper h2 {
+        margin-top: 120px;
+    }
+    video {
+        display: none;
+    }
+    .mobile_text_1 {
+        color:rgba(245, 245, 245, 0.65);
+         font-size: 60px;
+         padding: 15px;
+    }
+    .mobile_text {
+        color:rgba(245, 245, 245, 0.65);
+        font-size: 45px;
+        padding-top: 15px;
+    }
+    span {
+        display: none;
+    }
+    .landingpage_anchors a {
+        margin-top: 520px;
 }
 @media only screen and (min-width: 575px) and (max-width: 767px) {
     .landingpage_wrapper h2 {
         font-size: 45px;
     }
-    span::before {
-        font-size: 45px;
-    }
-
 }
 
-@media only screen and (min-width: 360px) and (max-width: 575px) {
-    .landingpage_wrapper h2 {
-        font-size: 24px;
-    }
-    span::before {
-        font-size: 30px;
-    }
-    .landingpage_anchors {
-        top: 48%;
-        left: 50%;
-        letter-spacing: 25px;
-    }
-    .landingpage_anchors a {
-        font-size: 14px;
-        padding: 6px 12px;
-    }
-}
-
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 575px) {
     .landingpage_wrapper {
         left: 50%;
     }
     .landingpage_wrapper h2 {
-        font-size: 20px;
+        font-size: 30px;
+        margin-top: 90px;
     }
     .p_text {
-        margin-bottom: 25px;
+        font-size: 30px;
+        margin-bottom: 5px;
 
     }
     span::before {
@@ -188,8 +191,21 @@ span:before {
     .landingpage_anchors a {
         font-size: 12px;
         padding: 6px 12px;
+        margin-top: 420px;
+    }
+    .mobile_text_1 {
+        color:rgba(245, 245, 245, 0.65);
+         font-size: 37px;
+         padding: 15px;
+    }
+    .mobile_text {
+        color:rgba(245, 245, 245, 0.65);
+        font-size: 15px;
+        padding-top: 15px;
     }
 }
+
+
 
 /* Landscape settings */ 
 
