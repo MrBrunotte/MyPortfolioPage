@@ -61,8 +61,7 @@ h1, h2, h3, h4, h5, h6
 /****************************
 ###### SIDE CONTAINERS ######
 ****************************/
-.side_container_social,
-.side_container_email {
+.side_container_social {
     width: 40px;
     position: fixed;
     bottom: 10px;
@@ -70,13 +69,9 @@ h1, h2, h3, h4, h5, h6
     list-style: outside none none;
 }
 .side_container_social {
-    left: 3px;
+    left: 1%;
 }
-.side_container_email {
-    right: 3px;
-}
-.side_container_social::before,
-.side_container_email::before {
+.side_container_social::before{
     content: "";
     display: block;
     width: 2px;
@@ -234,8 +229,8 @@ h1, h2, h3, h4, h5, h6
     display:none;
     color:#f5f5f561;
     position: fixed;
-    top: 14%;
-    right: 80px;
+    bottom: 6%;
+    right: -1%;
     cursor: pointer;
     background-color: transparent;
     transition-duration: 0.2s;
@@ -1085,7 +1080,9 @@ h1, h2, h3, h4, h5, h6
         bottom: 15px;
         right: 0px;
     }
-
+    h1 {
+        font-size: 35px;
+    }
     .title_left {
         margin: 80px 0 0;
         font-size: 1.5rem;
@@ -1135,8 +1132,7 @@ h1, h2, h3, h4, h5, h6
     .blur {
         opacity: 1;
     }
-    .side_container_social,
-    .side_container_email {
+    .side_container_social {
         display: none;
     }
     .meet_me_container {
@@ -1383,16 +1379,18 @@ h1, h2, h3, h4, h5, h6
 }
 @media screen and (max-width: 812px) and (orientation:landscape) {
     #back-to-top-btn {
-        right: -11px;
+        right: -2%;
+        bottom: 7%;
+    }
+    .nav_links a {
+        font-size: 12px;
     }
     .side_container_social {
-        top: 235px;
+        top: 175px;
+        left: 0%;
     }
-    .side_container_email {
-        top: 155px;
-    }
-    .side_container_social::before,
-    .side_container_email::before {
+    
+    .side_container_social::before {
         display: none;
     }
     .email_anchor {
