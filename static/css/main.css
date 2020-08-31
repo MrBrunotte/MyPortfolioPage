@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6
     padding: 25px;
 }
 
-/***** First container (landingpage) *****/
+/***** First container *****/
 .first_container {
     margin: 0px auto;
     padding: 0px;
@@ -888,12 +888,8 @@ h1, h2, h3, h4, h5, h6
     .name_p {
         width: 100%;
     }
-
     .welcome_container {
         margin: 45px 0px 0px;
-    }
-    .first_container {
-        height: 44vh;
     }
     .section_header {
         width: 100%;
@@ -902,6 +898,9 @@ h1, h2, h3, h4, h5, h6
         text-align: center;
         font-size: 28px;
         position: relative;
+    }
+    .first_container {
+        height: 100vh;
     }
     .section_header::before,
     .section_header::after {

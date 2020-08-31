@@ -233,28 +233,3 @@ span:before {
         top: 26%;
     }
 }
-@media screen and (max-width: 736px) and (orientation:landscape) {
-}
-/*
-@media screen and (max-width: 667px) and (orientation:landscape) {
-    
-}
-
-@media screen and (max-width: 568px) and (orientation:landscape) {
-    .landingpage_wrapper {
-        top: 48%;
-    }
-    .landingpage_wrapper h2 {
-        margin: 0 0 10px;
-    }
-    .p_text {
-        margin: 0;
-    }
-    .mobile_text {
-        padding: 0;
-    }
-    .landingpage_anchors {
-        top: 26%;
-    }
-    
-}*/
